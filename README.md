@@ -2,7 +2,7 @@
 
 This tool allows to connect to OPC UA and DA servers, poll for data and subscribe to events and write data in real time to a MongoDB database.
 
-It is simple to configure, the opc2mongodb.conf file is self explained, it must me put in the same folder as the exe file.
+It is simple to configure, the opc2mongodb.conf file is self explained, it must be put in the same folder as the exe file.
 
 The code is written in C# and it uses the h-OPC and the oficial MongoDB libraries for C#.
 Requires the .NET fremework 4.6 or later.
