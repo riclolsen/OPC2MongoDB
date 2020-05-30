@@ -4,7 +4,10 @@ This tool allows to connect to OPC UA and DA servers, poll for data and subscrib
 
 It is simple to configure, the opc2mongodb.conf file is self explained, it must be put in the same folder as the exe file.
 
-The code is written in C# and it uses the h-OPC and the oficial MongoDB libraries for C#.
+The code is written in C# and it uses a forked h-OPC and the oficial MongoDB libraries for C#.
+
+Requires https://github.com/riclolsen/h-opc.
+
 Requires the .NET fremework 4.6 or later.
 
 Executable binaries are available for download in the Releases section.
@@ -21,8 +24,8 @@ Example of config file:
 	
 	# OPC SERVERS
 
-	#  OPC_UA_URL,                   READ_INTERVAL_IN_SECONDS,  SERVER_ID=MONGO_COLLECTION_NAME
-	opc.tcp://opcuaserver.com:48484, 10,                        Server1
+	#  OPC_UA_URL,                   READ_INTERVAL_IN_SECONDS,  SERVER_ID=MONGO_COLLECTION_NAME, CERTIFICATE_FILE_PATH, CERTIFICATE_PASSWORD
+		opc.tcp://opcuaserver.com:48484, 10,                        Server1,                     cert.pfx              ,secret123
 
 	# OPC TAGS TO READ FROM THE SERVER
 
